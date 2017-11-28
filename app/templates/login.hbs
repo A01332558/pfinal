@@ -1,0 +1,82 @@
+<head>
+
+<meta charset="utf-8">
+	<title>Don Beto's Shop</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"/>
+</head>
+
+
+<body style="background-image: url(http://www.publicdomainpictures.net/pictures/190000/velka/black-background-1468370534d5s.jpg);">
+
+<div class="ui container">
+	<div class="card-panel white">
+		<div class="ui container">
+			<div class="card-panel black">
+				<h1 class="white-text text-darken-2" style="text-align: center;">Don Beto's Shop</h1>
+			</div>
+		</div>
+		<br>
+		<div class="ui container">
+			<div class="card-panel transparent" style="text-align: center;">
+				<form class="ui form">
+					<h4 class="ui dividing header">Inicia Sesión</h4>
+					<div class="field">
+						<label>Usuario o correo</label>
+						<div class="ui input" style="width: 25%;">
+				          {{input type="email" placeholder="Usuario o correo" value=name}}
+				        </div>
+				        <p></p>
+				        <label>Contraseña</label>
+						<div class="ui input" style="width: 25%;">
+				          {{input type="password" placeholder="Contraseña" vale=password}}
+				        </div>
+					</div>
+				</form>
+				<p></p>
+				<button class="ui button" {{action 'sigIn' 'email'}}>Iniciar sesión</button>
+				<div class="ui horizontal transparent divider">Ó</div>
+				<button class="ui inverted black button">Registrate</button>
+				<p></p>
+				<button class="ui facebook button" {{action 'sigIn' 'facebook'}}>
+				 	<i class="facebook icon"></i>
+				  	Facebook
+				</button>
+				<button class="ui twitter button" {{action 'sigIn' 'twitter'}}>
+					<i class="twitter icon"></i>
+				  	Twitter
+				</button>
+				<button class="ui google plus button" {{action 'sigIn' 'google'}}>
+				  	<i class="google plus icon"></i>
+				  	Google Plus
+				</button>
+			</div>
+		</div>
+		<br>
+		<div class="ui container">
+			<div class="card-panel black">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+
+<footer class="black page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+    			<h5 class="white-text">Don Beto's Shop</h5>
+                
+            </div>
+            
+        </div>
+    </div>
+        <div class="footer-copyright">
+        	<div class="container">
+            	© 2017 Kabram Producciones, Todos los derechos Reservados.
+            </div>
+        </div>
+</footer>
