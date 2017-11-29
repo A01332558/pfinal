@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
 							// El inicio funcionó
 							// debugger
 							if(this.get("session.isAuthenticated")){
-								return this.transitionToRoute("/profile");
+								return this.transitionToRoute("profile");
 							}
 								else{
 									return this.transitionToRoute("/");
@@ -21,10 +21,10 @@ export default Ember.Controller.extend({
 							// Falló el inicio
 							// debugger
 							if(this.get("session.isAuthenticated")){
-								return this.transitionToRoute("/");
+								return this.transitionToRoute("profile");
 							}
 								else{
-									return this.transitionToRoute("login");
+									return this.transitionToRoute("/");
 								}
 						})
 					break;
@@ -38,6 +38,11 @@ export default Ember.Controller.extend({
 						})
 						break;
 				}
+
+
 		},
+		Registrate(){
+			this.transitionToRoute('registration');
+		}
 	},
 });
