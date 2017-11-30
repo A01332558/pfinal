@@ -1,22 +1,23 @@
 
 <div class="ui container">
 	<div class="card-panel transparent" style="text-align: center;">
-		<form class="ui form">
+		<form class="ui form" {{action 'sigIn' 'email' on='submit'}}>
 			<h4 class="ui dividing header">Inicia Sesión</h4>
 			<div class="field">
 				<label>Usuario o correo</label>
 				<div class="ui input" style="width: 25%;">
-		        	{{input type="email" placeholder="Usuario o correo" value=name}}
+		        	{{input type="email" placeholder="Usuario o correo" value=email}}
 				</div>
 				<p></p>
 		        <label>Contraseña</label>
 				<div class="ui input" style="width: 25%;">
-			        {{input type="password" placeholder="Contraseña" vale=password}}
+			        {{input type="password" placeholder="Contraseña" value=password}}
 		        </div>
 			</div>
+			<button class="ui button" >Iniciar sesión</button>
 		</form>
 		<p></p>
-		<button class="ui button" {{action 'sigIn' 'email'}}>Iniciar sesión</button>
+		
 		<div class="ui horizontal transparent divider">Ó</div>
 		<button class="ui inverted black button" {{action 'Registrate'}}>Registrate</button>
 		<p></p>
@@ -33,6 +34,7 @@
 		  	Google Plus
 		</button>
 	</div>
+	<button class="ui negative basic button" {{action 'admin'}}>Administrador</button>
 </div>
 		
 

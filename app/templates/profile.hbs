@@ -13,13 +13,19 @@
       	Salir
     </a>
     <a class="ui item">
-    	<i class="material-icons prefix">shopping_cart</i>
+    	<i class="material-icons prefix"{{action 'goTo' 'shop'}}>shopping_cart</i>
     </a>
   </div>
 </div>
-<div class="ui segment">
-  <p></p>
-</div>
+{{!-- <div class="ui segment"> --}}
+  	<ul class="collection with-header">
+        <li class="collection-header"><h4>Datos</h4></li>
+        <li class="collection-item">Nombre: {{model.name}}{{model.sname}}</li>
+        <li class="collection-item">Telefono: {{model.phone}} </li>
+        <li class="collection-item">Dirección: {{model.street}} No. {{model.addnum}}</li>
+        <li class="collection-item">Correo: {{model.email}}</li>
+    </ul>
+{{!-- </div> --}}
 
 
 

@@ -10,7 +10,6 @@ export default Ember.Controller.extend({
 					case 'facebook':
 						this.get('session').open('firebase', {provider: 'facebook'}).then(()=>{
 							// El inicio funcionó
-							// debugger
 							if(this.get("session.isAuthenticated")){
 								return this.transitionToRoute("profile");
 							}
@@ -29,6 +28,8 @@ export default Ember.Controller.extend({
 						})
 					break;
 					case 'email':
+					
+
 						this.get('session').open('firebase', {
 							provider: 'password',
 							email: this.get('email'),
@@ -43,6 +44,9 @@ export default Ember.Controller.extend({
 		},
 		Registrate(){
 			this.transitionToRoute('registration');
+		},
+		admin(){
+			this.transitionToRoute('amdin-login');
 		}
 	},
 });

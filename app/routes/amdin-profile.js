@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import AuthRoute from '../mixins/authenticated';
 
-export default Ember.Route.extend(AuthRoute, {
+export default Ember.Route.extend({
 	session: Ember.inject.service(),
 
 	beforeModel(){
@@ -16,6 +16,8 @@ export default Ember.Route.extend(AuthRoute, {
 
 	model(){
 		let id = this.get('session.uid');
-		return this.store.find('client', id);
-	}
+		console.log(this.store.find('admin', id));
+		return this.store.find('admin', id);
+		//return this.store.find('admin', 'r6s1s8Lw2wWCWkE8gdKvPwJaEwt2');
+	},
 });

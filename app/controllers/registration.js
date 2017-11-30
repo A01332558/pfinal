@@ -39,6 +39,7 @@ export default Ember.Controller.extend({
 						phone: phone,
 						addnum: addnum,
 						street: street,
+						email: email,
 
 						//addnum: DS.attr('string'),
 						id: response.uid}).save().then(()=>{

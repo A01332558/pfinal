@@ -5,8 +5,9 @@ export default Ember.Controller.extend({
 	actions: {
 		signOut(){
 			return this.get("session").close().then(()=>{
-				return this.transitionToRoute("/");
+				return this.transitionToRoute("amdin-login");
 			});
 		}
 	},
+	
 });

@@ -11,6 +11,11 @@ Router.map(function() {
   this.route('registration');
   this.route('profile');
   this.route('artsearch');
+  this.route('products');
+  this.route('orders');
+  this.route('shop');
+  this.route('amdin-profile');
+  this.route('amdin-login');
 });
 
 export default Router;

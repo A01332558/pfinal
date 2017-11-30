@@ -1,0 +1,22 @@
+<div class="ui container">
+	<div class="card-panel transparent" style="text-align: center;">
+		<form class="ui form" {{action 'sigIn' 'email' on='submit'}}>
+			<h4 class="ui dividing header">Inicia Sesión</h4>
+			<div class="field">
+				<label>Usuario admin</label>
+				<div class="ui input" style="width: 25%;">
+		        	{{input type="email" placeholder="Usuario o correo" value=emailadmin}}
+				</div>
+				<p></p>
+		        <label>Contraseña</label>
+				<div class="ui input" style="width: 25%;">
+			        {{input type="password" placeholder="Contraseña" value=passwordadmin}}
+		        </div>
+			</div>
+			<button class="ui button" >Iniciar sesión</button>
+		</form>
+
+	</div>
+	<h6 class="ui header">¿No eres Don Beto?</h6>
+	<button class="ui primary basic button" {{action 'usuario'}} >Usuario</button>
+</div>

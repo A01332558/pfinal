@@ -38,8 +38,7 @@
     "emberfire": "^2.0.8",
     "emberfire-utils": "^1.5.1",
     "loader.js": "^4.2.3",
-    "torii": "^0.9.6",
-    "torii-fire": "^0.2.3"
+    "torii": "^0.9.6"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
