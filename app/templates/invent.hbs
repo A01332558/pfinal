@@ -1,14 +1,14 @@
 <div class="ui secondary pointing menu">
-  <a class="item">
+  <a class="item" {{action 'goTo' 'info'}}>
     Info. Gral.
   </a>
-  <a class="item active">
+  <a class="item active" {{action 'goTo' 'invent'}}>
     Inventario
   </a>
-  <a class="item">
+  <a class="item" {{action 'goTo' 'pedidos'}}>
     Pedidos Clientes
   </a>
-  <a class="item">
+  <a class="item" {{action 'goTo' 'adminacc'}}>
     Administrar Cuentas
   </a>
   <div class="right menu">
@@ -18,5 +18,5 @@
   </div>
 </div>
 <div class="ui segment">
-	{{regis-products model=model}}  	
+	{{regis-products invent=model}}  	
 </div>

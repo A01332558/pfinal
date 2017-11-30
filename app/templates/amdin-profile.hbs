@@ -1,11 +1,14 @@
 <div class="ui secondary pointing menu">
-  <a class="item active">
+  <a class="item active" {{action 'goTo' 'info'}}>
+    Info. Gral.
+  </a>
+  <a class="item" {{action 'goTo' 'invent'}}>
     Inventario
   </a>
-  <a class="item">
+  <a class="item" {{action 'goTo' 'pedidos'}}>
     Pedidos Clientes
   </a>
-  <a class="item">
+  <a class="item" {{action 'goTo' 'adminacc'}}>
     Administrar Cuentas
   </a>
   <div class="right menu">
@@ -15,5 +18,11 @@
   </div>
 </div>
 <div class="ui segment">
-  	
+  	<ul class="collection with-header">
+        <li class="collection-header"><h4>Datos</h4></li>
+        <li class="collection-item">Nombre: {{model.name}}</li>
+        <li class="collection-item">Teléfono: {{model.tel}}</li>
+        <li class="collection-item">¿Admin?: {{model.admin}}</li>
+        <li class="collection-item">Email: {{model.email}}</li>
+    </ul>
 </div>

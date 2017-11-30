@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+	name: DS.attr('string'),
 
 	admin: DS.belongsTo('admin'),
-	tickets: DS.hasMany('ticket'),
-
+	invent: DS.belongsTo('invent')
 });

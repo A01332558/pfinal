@@ -1,0 +1,20 @@
+<form>
+	<button class="ui secondary button" {{action 'saveProduct'}}>Añadir Producto</button>
+	<ul class="collection with-header">
+		<li class="collection-header"><h4>Productos</h4></li>
+		{{#each invent.products as |product|}}
+			<li class="collection-item">
+				{{!-- {{a.nombre}} - De: {{a.inicio}} a {{a.fin}} --}}
+				{{!-- nombre
+				{{input value=a.nombre}}
+				inicio
+				{{input type='datetime-local' value=a.inicio}}
+				fin
+				{{input type='datetime-local' value=a.fin}} --}}
+				{{field-products product=product}}
+			</li>
+		{{/each}}
+	</ul>
+	<hr>
+	<button class="ui primary button" {{action 'save'}} >Guardar</button>
+</form>

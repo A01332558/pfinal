@@ -1,0 +1,27 @@
+<div class="row">
+    <form class="col s8">
+      	<div class="row">
+        	<div class="input-field col s2">
+				{{input value=product.name}}
+				<label>Producto:</label>
+			</div>
+			<div class="input-field col s2">
+				{{input value=product.amount}}
+				<label>Cantidad:</label>
+			</div>
+			<div class="input-field col s2">
+				{{input class="validate" value=product.fin}}
+				<label>Precio:</label>
+			</div>
+			<div class="input-field col s2">
+				{{input class="validate" value=product.fin}}
+				<label>Precio:</label>
+			</div>
+			<div class="col s4">
+				<button class="negative ui button" {{action 'destroyProducto'}}> Quitar</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+
