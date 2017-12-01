@@ -2,20 +2,20 @@
     <form class="col s8">
       	<div class="row">
         	<div class="input-field col s2">
-				{{input value=product.name}}
-				<label>Producto:</label>
+				{{input class="validate" value=product.name}}
+				<label class="active">Producto:</label>
 			</div>
 			<div class="input-field col s2">
-				{{input value=product.amount}}
-				<label>Cantidad:</label>
+				{{input class="validate" value=product.amount}}
+				<label class="active">Cantidad:</label>
 			</div>
 			<div class="input-field col s2">
-				{{input class="validate" value=product.fin}}
-				<label>Precio:</label>
+				{{input class="validate" value=product.price}}
+				<label class="active">Precio:</label>
 			</div>
 			<div class="input-field col s2">
-				{{input class="validate" value=product.fin}}
-				<label>Precio:</label>
+				{{input class="validate" value=product.marca}}
+				<label class="active">Marca:</label>
 			</div>
 			<div class="col s4">
 				<button class="negative ui button" {{action 'destroyProducto'}}> Quitar</button>

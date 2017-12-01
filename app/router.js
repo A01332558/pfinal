@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('amdin-login');
   this.route('invent');
   this.route('cientacc');
+  this.route('order');
 });
 
 export default Router;

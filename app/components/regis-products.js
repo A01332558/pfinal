@@ -5,15 +5,15 @@ export default Ember.Component.extend({
 	actions:{
 		save(){
 			
-			let product = this.get('product');
+			let invent = this.get('invent');
 			
-			if( Ember.isBlank( product.get('product')) ){
-				alert('el campo de nombre del producto no puede estar vacio');
-				return;
-			}
+			// if( Ember.isBlank( invent.get('name')) ){
+			// 	alert('el campo de nombre del producto no puede estar vacio');
+			// 	return;
+			// }
 			
-			product.save().then(()=>{
-					Ember.RSVP.all(product.get('products').invoke('save')   ).then(()=>{ 
+			invent.save().then(()=>{
+					Ember.RSVP.all(invent.get('products').invoke('save')   ).then(()=>{ 
 						alert('Ya se guardó');
 						this.sendAction('didSave');
 					})

@@ -1,1 +1,50 @@
-{{outlet}}
+<div class="ui secondary pointing menu">
+  <a class="item" {{action 'goTo' 'profile'}}>
+    Perfil
+  </a>
+  <a class="item active" {{action 'goTo' 'artsearch'}}>
+    Productos
+  </a>
+  <a class="item" {{action 'goTo' 'order'}}>
+    Pedidos
+  </a>
+  <div class="right menu">
+    <a class="ui item" {{action 'signOut'}}>
+      	Salir
+    </a>
+    <a class="ui item">
+    	<i class="material-icons prefix"{{action 'goTo' 'shop'}}>shopping_cart</i>
+    </a>
+  </div>
+</div>
+<div class="ui segment">
+  <div class="ui inverted segment">
+    <div class="ui inverted relaxed divided list">
+      {{#each model.products as |producto|}}
+        <div class="item">
+          <div class="content">
+            <div class="header">{{producto.name}}</div>
+            <p>
+              <div class="row">
+                <div class="col s2">
+                  ${{producto.price}}
+                </div>
+                <div class="col s2">
+                  <div class="ui vertical animated button" tabindex="0">
+                    <div class="hidden content">Añadir</div>
+                    <div class="visible content">
+                      <i class="shop icon"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+
+     
