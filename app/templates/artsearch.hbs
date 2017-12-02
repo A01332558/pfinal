@@ -17,33 +17,51 @@
     </a>
   </div>
 </div>
+
 <div class="ui segment">
+    {{!-- <div class="col s6">
+    </div> --}}
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s10">
+          {{input placeholder="Buscar" type="text" class="validate"}}
+        </div>
+        <div class="col s2">
+          <i class="circular search link icon"></i>
+        </div>
+      </div>
+    </form>
+  </div>
+  
   <div class="ui inverted segment">
-    <div class="ui inverted relaxed divided list">
+    <div class="ui inverted relaxed horizontal list">
       {{#each model.products as |producto|}}
         <div class="item">
           <div class="content">
             <div class="header">{{producto.name}}</div>
-            <p>
-              <div class="row">
-                <div class="col s2">
-                  ${{producto.price}}
-                </div>
-                <div class="col s2">
-                  <div class="ui vertical animated button" tabindex="0">
-                    <div class="hidden content">Añadir</div>
-                    <div class="visible content">
-                      <i class="shop icon"></i>
-                    </div>
+            <div class="row">
+              <div class="col s12">
+                ${{producto.price}}
+                <br><br>
+                Stock: {{producto.amount}}
+                <br><br>
+              </div>
+              <div class="col s2">
+                <div class="ui vertical animated button" tabindex="0">
+                  <div class="hidden content">Añadir</div>
+                  <div class="visible content">
+                    <i class="shop icon"{{action 'addshop'}}></i>
                   </div>
                 </div>
               </div>
-            </p>
+            </div>
           </div>
         </div>
       {{/each}}
     </div>
   </div>
+
 </div>
 
 
