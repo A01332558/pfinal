@@ -7,5 +7,6 @@ export default DS.Model.extend({
 	addnum: DS.attr('string'),
 	street: DS.attr('string'),
 
-	tickets: DS.hasMany('ticket')
+	tickets: DS.hasMany('ticket'),
+	adminstore: DS.belongsTo('adminstore'),
 });
