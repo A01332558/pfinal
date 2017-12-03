@@ -18,24 +18,33 @@
   </div>
 </div>
 <div class="ui segment">
-  <div class="ui list">
-  {{#each model as |client|}}
-    <div class="item">
-      <img class="ui avatar image" src="/images/avatar2/small/rachel.png">
-      <div class="content">
-        <a class="header">{{client.name}}</a>
-        <div class="description">
-          Correo:
-          <a>
-            <b>
-              {{client.email}}
-            </b>
-          </a>
+  <div class="ui horizontal list">
+    {{#each model as |client|}}
+      <div class="item">
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="col s2">
+                <img class="ui avatar image">
+                <div class="content">
+                  <a class="header">{{client.name}} {{client.sname}}</a>
+                  <div class="description">
+                    Correo:
+                    <a>
+                      <b>
+                        {{client.email}}
+                      </b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s2">
+                <button class="negative ui button" {{action 'destroyClient'}}>Eliminar</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
-  {{/each}}
+    {{/each}}
   </div>
-  
-
 </div>

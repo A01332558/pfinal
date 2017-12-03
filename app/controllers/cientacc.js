@@ -25,5 +25,9 @@ export default Ember.Controller.extend({
 
 			}
 		},
+		destroyClient(){
+			let id = this.get('client.id');
+			this.get('client').destroyRecord(id);
+		}
 	},
 });
