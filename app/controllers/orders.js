@@ -25,5 +25,8 @@ export default Ember.Controller.extend({
 
 			}
 		},
+		culminar(ticket){
+			ticket.destroyRecord();
+		}
 	},
 });

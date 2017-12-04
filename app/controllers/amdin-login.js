@@ -13,8 +13,12 @@ export default Ember.Controller.extend({
 							password: this.get('passwordadmin')
 						}).then(()=>{
 							return this.transitionToRoute('amdin-profile');
-						}).catch((error)=>{
-							console.log(error);
+						}).catch(()=>{
+							window.swal({
+							  title: '¡Error!',
+							  text:'Usuario o contraseña del administrador incorrectos.',
+							  type:'error',
+							})
 						})
 						break;
 				}

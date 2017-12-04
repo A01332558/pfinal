@@ -17,3 +17,33 @@
     </a>
   </div>
 </div>
+
+<div class="ui segment">
+  <div class="ui relaxed list">
+        <h4>Ticket: {{model.id}}</h4>
+        <div class="item">
+          <div class="content">
+            <div class="row">
+              <div class="col s12">
+                {{#each model.products as |product|}}
+                  Producto: {{product.name}}
+                  <br>
+                  Precio: ${{product.price}}
+                  <br><br>
+                {{/each}}
+              </div>
+              <div class="ui clearing divider"></div>
+              <div class="col s12">
+                <h2 class="ui right floated header">Total: ${{model.total}}</h2>
+              </div>
+              <div class="col s12">
+                <div class="row">
+                  <button class="positive ui button" {{action 'continuar'}}>Confirmar</button>
+                  <button class="negative ui button" {{action 'culminar' model}}>Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>

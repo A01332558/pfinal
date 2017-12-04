@@ -25,5 +25,12 @@ export default Ember.Controller.extend({
 
 				}
 			},
+		culminar(model){
+			model.destroyRecord();
+			return this.transitionToRoute("artsearch");
+		},
+		continuar(){
+			return this.transitionToRoute("order");
+		},
 	},
 });

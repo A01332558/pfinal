@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('artsearch');
   this.route('products');
   this.route('orders');
-  this.route('shop');
+  this.route('shop', {path: '/:id'});
   this.route('amdin-profile');
   this.route('amdin-login');
   this.route('invent');

@@ -27,6 +27,26 @@ export default Ember.Controller.extend({
 								}
 						})
 					break;
+					case 'google':
+						this.get('session').open('firebase', {provider: 'google'}).then(()=>{
+							// El inicio funcionó
+							if(this.get("session.isAuthenticated")){
+								return this.transitionToRoute("profile");
+							}
+								else{
+									return this.transitionToRoute("/");
+								}
+						}).catch(()=>{
+							// Falló el inicio
+							// debugger
+							if(this.get("session.isAuthenticated")){
+								return this.transitionToRoute("profile");
+							}
+								else{
+									return this.transitionToRoute("/");
+								}
+						})
+					break;
 					case 'email':
 					
 
@@ -36,6 +56,12 @@ export default Ember.Controller.extend({
 							password: this.get('password')
 						}).then(()=>{
 							return this.transitionToRoute('profile');
+						}).catch(()=>{
+							window.swal({
+							  title: '¡Error!',
+							  text:'Usuario o contraseña incorrectos.',
+							  type:'error',
+							})
 						})
 						break;
 				}

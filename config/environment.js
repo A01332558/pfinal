@@ -36,12 +36,12 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.firebase = {
-      apiKey: "AIzaSyDgqVrgzzWbA1lj_91-9YrTTXFon5ccHaU",
-      authDomain: "pfinal-13afb.firebaseapp.com",
-      databaseURL: "https://pfinal-13afb.firebaseio.com",
-      projectId: "pfinal-13afb",
-      storageBucket: "pfinal-13afb.appspot.com",
-      messagingSenderId: "641504788798"
+    apiKey: "AIzaSyDgqVrgzzWbA1lj_91-9YrTTXFon5ccHaU",
+    authDomain: "pfinal-13afb.firebaseapp.com",
+    databaseURL: "https://pfinal-13afb.firebaseio.com",
+    projectId: "pfinal-13afb",
+    storageBucket: "pfinal-13afb.appspot.com",
+    messagingSenderId: "641504788798"
     };
   }
 
@@ -57,7 +57,14 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.firebase = {
+    apiKey: "AIzaSyDgqVrgzzWbA1lj_91-9YrTTXFon5ccHaU",
+    authDomain: "pfinal-13afb.firebaseapp.com",
+    databaseURL: "https://pfinal-13afb.firebaseio.com",
+    projectId: "pfinal-13afb",
+    storageBucket: "pfinal-13afb.appspot.com",
+    messagingSenderId: "641504788798"
+    };
   }
 
   return ENV;
