@@ -38,12 +38,13 @@ export default Ember.Controller.extend({
 				  cancelButtonText: 'Cancelar'
 				}).then((result) => {
 				    if(result.value)	{
+				    	client.destroyRecord();
 				    	window.swal({
 						  title: '¡Borrado!',
 					      text: 'La cuenta se ha borrado.',
 					      type: 'success'
 					    }).then(()=>{
-					    	client.destroyRecord();
+					    	
 					    });
 				    }
 				})

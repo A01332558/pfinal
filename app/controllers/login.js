@@ -27,6 +27,26 @@ export default Ember.Controller.extend({
 								}
 						})
 					break;
+					// case 'twitter':
+					// 	this.get('session').open('firebase', {provider: 'twitter'}).then(()=>{
+					// 		// El inicio funcionó
+					// 		if(this.get("session.isAuthenticated")){
+					// 			return this.transitionToRoute("profile");
+					// 		}
+					// 			else{
+					// 				return this.transitionToRoute("/");
+					// 			}
+					// 	}).catch(()=>{
+					// 		// Falló el inicio
+					// 		// debugger
+					// 		if(this.get("session.isAuthenticated")){
+					// 			return this.transitionToRoute("profile");
+					// 		}
+					// 			else{
+					// 				return this.transitionToRoute("/");
+					// 			}
+					// 	})
+					// break;
 					case 'google':
 						this.get('session').open('firebase', {provider: 'google'}).then(()=>{
 							// El inicio funcionó
